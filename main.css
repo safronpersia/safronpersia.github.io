@@ -203,7 +203,8 @@ body {
 .order-now-section {
     width: 100%;
     background-color: rgba(71, 68, 72, .1);
-    padding-block: 15px;
+    /*padding-block: 15px;*/
+    padding-block: 30px;
 }
 
 .order-now {
