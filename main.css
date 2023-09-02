@@ -113,24 +113,16 @@ body {
 }
 
 .description-content {
-    margin-block: 3rem;
+    margin-block: 5rem;
     width: 40%;
     display: flex;
     flex-direction: column;
-}
-
-.description-content #element-1 {
-    width: 150px;
-    margin-left: -2rem;
-    margin-top: -27rem;
 }
 
 .description-content .description-text {
     display: flex;
     flex-direction: column;
     color: var(--background-color);
-    margin-left: 5rem;
-    margin-bottom: 4rem;
 }
 
 .description-text h2 {
@@ -142,6 +134,133 @@ body {
     width: 90%;
     font-weight: 300;
     font-size: 100%;
+}
+
+/* Khasiat */
+.khasiat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.khasiat .header {
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.khasiat .khasiat-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 50px;
+}
+
+.khasiat .khasiat-content .content img {
+    width: 20%;
+}
+
+.khasiat .khasiat-content .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    text-align: center;
+}
+
+/* More Pictures */
+.more-pictures {
+    width: 100%;
+    display: flex;
+}
+
+.more-pictures > * {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+}
+
+.more-pictures .pic1 {
+    background-image: url(img/pic1.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.more-pictures .pic2 {
+    background-image: url(img/pic2.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.more-pictures .pic3 {
+    background-image: url(img/pic3.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Order Now */
+.order-now-section {
+    width: 100%;
+    background-color: rgba(71, 68, 72, .1);
+    padding-block: 15px;
+}
+
+.order-now {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-now .order-text {
+    font-weight: 800;
+    margin: 0;
+}
+
+.order-now .ecommerce-section {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+#tokped-logo, 
+#shopee-logo {
+    width: 30px;
+    height: 100%;
+}
+
+h6#tokped-text {
+    margin: 0;
+    margin-left: 15px;
+    font-weight: 800;
+    color: #3F8A3D;
+}
+
+h6#shopee-text {
+    margin: 0;
+    margin-left: 15px;
+    font-weight: 800;
+    color: #F1582C;
+}
+
+.order-now .ecommerce-section a {
+    text-decoration: none;
+}
+
+.order-now .ecommerce-section a > * {
+    display: flex;
+    align-items: center;
+    padding-inline: 20px;
+    padding-block: 8px;
+    border-radius: 10px;
+}
+
+.order-now .ecommerce-section a .tokopedia-section {
+    background-color: rgba(96, 187, 85, .4);
+}
+
+.order-now .ecommerce-section a .shopee-section {
+    background-color: rgba(241, 88, 44, .4);
 }
 
 /* Pictures */
@@ -320,23 +439,11 @@ body {
     .description-content {
         width: 100%;
         margin-inline: 0;
-        margin-left: 5rem;
-    }
-
-    .description-content .description-text {
-        margin: 0;
-        margin-left: 5rem;
     }
 
     .description-text p {
         width: 80%;
         font-size: 85%;
-    }
-
-    .description-content #element-1 {
-        width: 110px;
-        margin-left: -1rem;
-        margin-top: -16rem;
     }
 
     .about-container .img-content {
@@ -364,48 +471,45 @@ body {
     }
 
     /* About */
-    .description-content {
-        width: 100%;
-        margin-inline: 0;
-        margin-left: 9rem;
-    }
-
-    .description-content #element-1 {
-        margin-left: -3rem;
-        margin-top: -15rem;
-    }
-    
-    .description-content .description-text {
-        margin-left: 2rem;
-    }
-
     .description-text p {
-        width: 80%;
+        width: 90%;
+    }
+
+    /* More Pictures */
+    .more-pictures {
+        flex-direction: column;
+    }
+
+    .more-pictures > * {
+        height: 150px;
+    }
+
+    /* Order Now */
+    .order-now-section {
+        padding-block: 30px;
+    }
+
+    .order-now {
+        flex-direction: column;
+        row-gap: 20px;
     }
 }
 
 @media (max-width: 576px) {
     /* About */
-    .description-content {
-        width: 100%;
-        margin-inline: 0;
-        margin-left: 7rem;
-    }
 
-    .description-content #element-1 {
-        width: 100px;
-        margin-left: -2rem;
-        margin-top: -16rem;
-    }
-
-    .description-content .description-text {
-        margin: 0;
-        margin-left: 3rem;
+    .description-text {
+        margin-inline: 20px;
     }
 
     .description-text p {
-        width: 80%;
+        width: 90%;
         font-size: 70%;
+    }
+
+    /* Khasiat */
+    .khasiat .khasiat-content {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
     
     /* Pictures */
@@ -430,12 +534,6 @@ body {
     .description-text p {
         width: 80%;
         font-size: 60%;
-    }
-
-    .description-content #element-1 {
-        width: 90px;
-        margin-left: -.4rem;
-        margin-top: -14rem;
     }
 
 }
